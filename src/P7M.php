@@ -12,7 +12,7 @@ class P7M
     protected $source;
     protected $destination;
     protected $binPath;
-    protected $params = ['{$openssl}', 'smime', '-verify', '-noverify', '-binary', '-in', '{$source}', '-inform', 'DER', '-out', '{$destination}'];
+    protected $params = ['{$openssl}', 'cms', '-verify', '-noverify', '-inform', 'DER', '-in', '{$source}', '-no_attr_verify', '-out', '{$destination}'];
 
     public function __construct(string $binPath = null)
     {
